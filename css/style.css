@@ -999,6 +999,40 @@ select {
 
 
 /* =========================================================
+   INFLUENCE BOX
+========================================================= */
+.influence-box{
+    margin: 30px 0px;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+    width: 100%;
+}
+.influence-box span{
+    font-size: 8rem;
+     
+    
+    /* font-size: 50px; */
+    font-weight: 800;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(rgba(187, 187, 187, 0.751), rgba(187, 187, 187, 0)) text;
+}
+.influence-btn-div{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px;
+}
+
+.influence-primary{
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+    box-shadow: 0 12px 28px rgba(37, 99, 235, 0.18);
+}
+
+
+
+/* =========================================================
    17. WHAT WE DO — INTRO
 ========================================================= */
 
