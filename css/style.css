@@ -1031,7 +1031,732 @@ select {
 }
 
 
+/* =========================================================
+   ADOX INFLUENCE — FEATURE HERO
+========================================================= */
 
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.adx-feature {
+    position: relative;
+
+    width: 100%;
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 30px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.adx-content {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TOP LABEL
+========================================================= */
+
+.adx-top-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    color: #7184a1;
+}
+
+.adx-top-label p {
+    margin: 0;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.28em;
+
+    white-space: nowrap;
+}
+
+.adx-top-label b {
+    margin: 0 10px;
+
+    color: #9eabc0;
+
+    font-size: 8px;
+}
+
+.adx-top-label > span {
+    width: 100px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #aebdd2
+        );
+}
+
+.adx-top-label > span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            #aebdd2,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.adx-title {
+    position: relative;
+
+    width: 100%;
+
+    margin: 62px 0 0;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: clamp(
+        70px,
+        10.5vw,
+        158px
+    );
+
+    line-height: 0.82;
+
+    letter-spacing: -0.075em;
+
+    font-weight: 950;
+
+    /*
+       EXACT FADE
+
+       TOP    = 100%
+       25%    = 85%
+       50%    = 50%
+       75%    = 18%
+       BOTTOM = 0%
+    */
+
+    background:
+        linear-gradient(
+            to bottom,
+
+            rgba(0, 0, 0, 1) 0%,
+
+            rgba(0, 0, 0, 0.92) 18%,
+
+            rgba(0, 0, 0, 0.72) 35%,
+
+            rgba(0, 0, 0, 0.50) 50%,
+
+            rgba(0, 0, 0, 0.28) 65%,
+
+            rgba(0, 0, 0, 0.10) 82%,
+
+            rgba(0, 0, 0, 0) 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.adx-description {
+    width: min(650px, 100%);
+
+    margin: 42px auto 0;
+
+    color: #667895;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+    font-weight: 450;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.adx-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 40px;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.adx-button {
+    min-width: 210px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    border-radius: 15px;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.adx-button i {
+    font-style: normal;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.adx-button:hover {
+    transform: translateY(-4px);
+}
+
+.adx-button:hover i {
+    transform: translate(4px, -4px);
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.adx-button-primary {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb 0%,
+            #315bea 55%,
+            #4f46e5 100%
+        );
+
+    box-shadow:
+        0 14px 32px rgba(37, 99, 235, 0.22);
+}
+
+.adx-button-primary:hover {
+    box-shadow:
+        0 20px 42px rgba(37, 99, 235, 0.30);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.adx-button-secondary {
+    color: #111827;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.09);
+}
+
+.adx-button-secondary:hover {
+    box-shadow:
+        0 16px 38px rgba(15, 23, 42, 0.13);
+}
+
+
+/* =========================================================
+   BOTTOM LABEL
+========================================================= */
+
+.adx-bottom-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    margin-top: 58px;
+}
+
+.adx-bottom-label p {
+    margin: 0;
+
+    color: #91a1b9;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.3em;
+}
+
+.adx-bottom-label > span {
+    width: 100px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #aebdd2
+        );
+}
+
+.adx-bottom-label > span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            #aebdd2,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   LEFT ORBIT
+========================================================= */
+
+.adx-circle {
+    position: absolute;
+
+    width: 570px;
+    height: 570px;
+
+    border: 1px solid rgba(37, 99, 235, 0.14);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.adx-circle-left {
+    left: -410px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   RIGHT ORBIT
+========================================================= */
+
+.adx-circle-right {
+    right: -410px;
+    top: 50%;
+
+    border-color:
+        rgba(124, 58, 237, 0.14);
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   LEFT GLOW
+========================================================= */
+
+.adx-glow {
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    filter: blur(65px);
+
+    pointer-events: none;
+}
+
+.adx-glow-left {
+    left: -130px;
+    top: 28%;
+
+    background:
+        rgba(37, 99, 235, 0.11);
+}
+
+.adx-glow-right {
+    right: -130px;
+    top: 35%;
+
+    background:
+        rgba(124, 58, 237, 0.10);
+}
+
+
+/* =========================================================
+   LEFT BLUE DOT
+========================================================= */
+
+.adx-dot {
+    position: absolute;
+
+    width: 19px;
+    height: 19px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.adx-dot-left {
+    left: 10.5%;
+    top: 38%;
+
+    background: #2563eb;
+
+    box-shadow:
+        0 0 0 12px rgba(37, 99, 235, 0.04),
+        0 0 35px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================================
+   RIGHT PURPLE DOT
+========================================================= */
+
+.adx-dot-right {
+    right: 10.5%;
+    top: 57%;
+
+    background: #7c3aed;
+
+    box-shadow:
+        0 0 0 12px rgba(124, 58, 237, 0.04),
+        0 0 35px rgba(124, 58, 237, 0.20);
+}
+
+
+/* =========================================================
+   DESKTOP REFINEMENT
+========================================================= */
+
+@media (min-width: 1500px) {
+
+    .adx-feature {
+        min-height: 760px;
+    }
+
+    .adx-title {
+        font-size: 150px;
+    }
+
+    .adx-description {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .adx-feature {
+        min-height: 650px;
+
+        padding: 75px 25px;
+    }
+
+    .adx-title {
+        margin-top: 50px;
+
+        font-size:
+            clamp(
+                60px,
+                11vw,
+                105px
+            );
+    }
+
+    .adx-description {
+        margin-top: 35px;
+
+        font-size: 15px;
+    }
+
+    .adx-circle {
+        width: 430px;
+        height: 430px;
+    }
+
+    .adx-circle-left {
+        left: -330px;
+    }
+
+    .adx-circle-right {
+        right: -330px;
+    }
+
+    .adx-dot-left {
+        left: 8%;
+    }
+
+    .adx-dot-right {
+        right: 8%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .adx-feature {
+        min-height: 590px;
+
+        padding: 65px 16px;
+    }
+
+
+    /* Top label */
+
+    .adx-top-label {
+        gap: 9px;
+    }
+
+    .adx-top-label p {
+        font-size: 7px;
+
+        letter-spacing: 0.17em;
+    }
+
+    .adx-top-label b {
+        margin: 0 4px;
+
+        font-size: 6px;
+    }
+
+    .adx-top-label > span {
+        width: 28px;
+    }
+
+
+    /* Title */
+
+    .adx-title {
+        margin-top: 40px;
+
+        font-size:
+            clamp(
+                42px,
+                13.4vw,
+                75px
+            );
+
+        letter-spacing: -0.075em;
+
+        line-height: 0.86;
+    }
+
+
+    /* Description */
+
+    .adx-description {
+        width: min(390px, 100%);
+
+        margin-top: 28px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* Buttons */
+
+    .adx-actions {
+        width: 100%;
+
+        gap: 9px;
+
+        margin-top: 29px;
+    }
+
+    .adx-button {
+        min-width: 0;
+
+        width: 145px;
+        height: 50px;
+
+        padding: 0 17px;
+
+        border-radius: 12px;
+
+        font-size: 11px;
+    }
+
+    .adx-button i {
+        font-size: 17px;
+    }
+
+
+    /* Bottom label */
+
+    .adx-bottom-label {
+        gap: 9px;
+
+        margin-top: 39px;
+    }
+
+    .adx-bottom-label p {
+        font-size: 6.5px;
+
+        letter-spacing: 0.17em;
+
+        white-space: nowrap;
+    }
+
+    .adx-bottom-label > span {
+        width: 28px;
+    }
+
+
+    /* Orbits */
+
+    .adx-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .adx-circle-left {
+        left: -245px;
+    }
+
+    .adx-circle-right {
+        right: -245px;
+    }
+
+
+    /* Glows */
+
+    .adx-glow {
+        width: 220px;
+        height: 220px;
+
+        filter: blur(55px);
+    }
+
+    .adx-glow-left {
+        left: -100px;
+    }
+
+    .adx-glow-right {
+        right: -100px;
+    }
+
+
+    /* Dots */
+
+    .adx-dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .adx-dot-left {
+        left: 10%;
+        top: 38%;
+    }
+
+    .adx-dot-right {
+        right: 10%;
+        top: 57%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .adx-feature {
+        min-height: 550px;
+    }
+
+    .adx-title {
+        font-size: 40px;
+    }
+
+    .adx-description {
+        font-size: 12px;
+    }
+
+    .adx-button {
+        width: 132px;
+        height: 47px;
+    }
+
+    .adx-bottom-label {
+        margin-top: 34px;
+    }
+}
 /* =========================================================
    17. WHAT WE DO — INTRO
 ========================================================= */
