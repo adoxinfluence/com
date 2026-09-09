@@ -1,0 +1,521 @@
+/* =========================================================
+   ADOXINFLUENCE — HEADER
+========================================================= */
+
+.site-header {
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.header-container {
+    width: min(100% - 60px, 1400px);
+    min-height: 82px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-logo img {
+    display: block;
+    width: auto;
+    height: 74px;
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+    margin-left: auto;
+}
+
+.nav-link {
+    position: relative;
+
+    color: #171717;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+
+    padding: 8px 0;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+
+    width: 0;
+    height: 1.5px;
+
+    background: #315cff;
+
+    transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+    color: #315cff;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   THEME TOGGLE
+========================================================= */
+/* =========================================
+   THEME TOGGLE
+========================================= */
+
+.theme-toggle {
+    --toggle-width: 68px;
+    --toggle-height: 36px;
+    --thumb-size: 28px;
+
+    position: relative;
+
+    width: var(--toggle-width);
+    min-width: var(--toggle-width);
+    height: var(--toggle-height);
+    min-height: var(--toggle-height);
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-shrink: 0;
+
+    border: 1px solid #e2e5ea;
+    border-radius: 999px;
+
+    background: #f4f6f8;
+    color: #22252a;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* -----------------------------------------
+   SUN / MOON ICONS
+----------------------------------------- */
+
+.theme-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 34px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 34px;
+
+    font-size: 15px;
+    line-height: 1;
+
+    user-select: none;
+
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.theme-sun {
+    color: #22252a;
+}
+
+.theme-moon {
+    color: #8d929a;
+}
+
+
+/* -----------------------------------------
+   SLIDING CIRCLE
+----------------------------------------- */
+
+.theme-switch {
+    position: absolute;
+    z-index: 1;
+
+    top: 3px;
+    left: 3px;
+
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+
+    display: block;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.10),
+        0 1px 2px rgba(0, 0, 0, 0.06);
+
+    pointer-events: none;
+
+    transition:
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* -----------------------------------------
+   HOVER
+----------------------------------------- */
+
+.theme-toggle:hover {
+    border-color: #cbd1da;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.theme-toggle:hover .theme-sun {
+    transform: rotate(-10deg);
+}
+
+.theme-toggle:hover .theme-moon {
+    transform: rotate(10deg);
+}
+
+
+/* -----------------------------------------
+   FOCUS
+----------------------------------------- */
+
+.theme-toggle:focus-visible {
+    outline: 2px solid #315cff;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+html.dark-mode .theme-toggle {
+    background: #181a1f;
+    border: 1px solid white;
+    color: black;
+
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.03),
+        0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+html.dark-mode .theme-switch {
+    transform: translateX(32px);
+
+    background: white;
+
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+html.dark-mode .theme-sun {
+    color: #707680;
+}
+
+html.dark-mode .theme-moon {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .theme-toggle {
+        --toggle-width: 62px;
+        --toggle-height: 34px;
+        --thumb-size: 26px;
+    }
+
+    .theme-icon {
+        width: 31px;
+        flex-basis: 31px;
+        font-size: 14px;
+    }
+
+    html.dark-mode .theme-switch {
+        transform: translateX(28px);
+    }
+}
+
+/* =========================================================
+   CTA BUTTONS
+========================================================= */
+
+.header-btn {
+    min-height: 40px;
+    padding: 0 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.header-btn span {
+    font-size: 14px;
+}
+
+.header-btn:hover {
+    transform: translateY(-2px);
+}
+
+.header-btn-brand {
+    background: #315cff;
+    color: #ffffff;
+    border: 1px solid #315cff;
+}
+
+.header-btn-brand:hover {
+    background: #2449d8;
+}
+
+.header-btn-creator {
+    background: #ffffff;
+    color: #171717;
+    border: 1px solid #dcdcdc;
+}
+
+.header-btn-creator:hover {
+    border-color: #315cff;
+    color: #315cff;
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.mobile-menu-toggle span {
+    width: 22px;
+    height: 1.5px;
+
+    background: #171717;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-nav {
+    display: none;
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+html.dark-mode .site-header {
+    background: rgba(15, 15, 18, 0.92);
+}
+
+html.dark-mode .nav-link {
+    color: #f5f5f5;
+}
+
+html.dark-mode .theme-toggle {
+    background: #1b1b20;
+    border-color: white;
+    color: #ffffff;
+}
+
+html.dark-mode .header-btn-creator {
+    background: transparent;
+    color: #ffffff;
+    border-color: #3a3a42;
+}
+
+html.dark-mode .mobile-menu-toggle span {
+    background: #ffffff;
+}
+
+
+/* =========================
+   MOBILE HEADER
+========================= */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        width: calc(100% - 32px);
+        min-height: 68px;
+        gap: 12px;
+    }
+
+    .header-logo img {
+        height: 40px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .header-actions {
+        margin-left: auto;
+        gap: 8px;
+    }
+
+    .header-actions .header-btn {
+        display: none;
+    }
+
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: none;
+        width: 100%;
+        padding: 10px 16px 20px;
+        background: #ffffff;
+        border-top: 1px solid #eeeeee;
+    }
+
+    .mobile-nav.open {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-nav-link {
+        display: block;
+        padding: 14px 4px;
+        color: #171717;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .mobile-nav-divider {
+        width: 100%;
+        height: 1px;
+        background: #eeeeee;
+        margin: 8px 0 14px;
+    }
+
+    .mobile-nav-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .mobile-nav-actions .header-btn {
+        flex: 1;
+    }
+
+    html.dark-mode .mobile-nav {
+        background: #0f0f12;
+        border-color: #29292f;
+    }
+
+    html.dark-mode .mobile-nav-link {
+        color: #f5f5f5;
+    }
+
+    html.dark-mode .mobile-nav-divider {
+        background: #29292f;
+    }
+}
