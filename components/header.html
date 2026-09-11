@@ -1,88 +1,136 @@
-<header class="site-header" id="siteHeader">
+<header class="site-header">
+    <link rel="stylesheet" href="header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <div class="header-container">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <nav class="navbar">
 
         <!-- Logo -->
-        <a href="index.html" class="header-logo" aria-label="AdoXInfluence Home">
-            <img src="../assets/logo/adoxinfluence.png" alt="AdoXInfluence">
+        <a href="../index.html" class="logo">
+            <img src="../assets/logo/adoxinfluence.png" alt="Digital Agency Logo">
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="header-nav" aria-label="Main navigation">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="pages/brands.html" class="nav-link">For Brands</a>
-            <a href="pages/creators.html" class="nav-link">For Creators</a>
-            <a href="pages/work.html" class="nav-link">Work</a>
-            <a href="pages/contact.html" class="nav-link">Contact</a>
-        </nav>
 
-        <!-- Header Actions -->
-        <div class="header-actions">
+        <!-- Mobile Menu Toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-            <!-- Theme Test Toggle -->
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
-                <span class="theme-icon theme-sun">☀</span>
-                <span class="theme-switch"></span>
-                <span class="theme-icon theme-moon">☾</span>
-            </button>
-
-            <!-- CTA Buttons -->
-            <a href="pages/brands.html" class="header-btn header-btn-brand">
-                Brand <span>↗</span>
-            </a>
-
-            <a href="pages/creators.html" class="header-btn header-btn-creator">
-                Creator <span>↗</span>
-            </a>
-
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Open menu"
-            aria-expanded="false">
+        <label for="menu-toggle" class="menu-icon">
             <span></span>
             <span></span>
             <span></span>
-        </button>
+        </label>
 
-    </div>
 
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <!-- Navigation -->
+        <div class="nav-content">
 
-        <a href="index.html" class="mobile-nav-link active">
-            Home
-        </a>
+            <ul class="nav-links">
 
-        <a href="pages/brands.html" class="mobile-nav-link">
-            For Brands
-        </a>
+                <li>
+                    <a href="/index.html" data-page="home">
+                        Home
+                    </a>
+                </li>
 
-        <a href="pages/creators.html" class="mobile-nav-link">
-            For Creators
-        </a>
+                <li>
+                    <a href="/pages/about.html" data-page="For Brands">
+                        For Brands
+                    </a>
+                </li>
 
-        <a href="pages/work.html" class="mobile-nav-link">
-            Work
-        </a>
 
-        <a href="pages/contact.html" class="mobile-nav-link">
-            Contact
-        </a>
+                <li>
+                    <a href="/pages/contact.html" data-page="For Creators">
+                        For Creators
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/contact.html" data-page="Contact">
+                        Contact
+                    </a>
+                </li>
 
-        <div class="mobile-nav-divider"></div>
+            </ul>
 
-        <div class="mobile-nav-actions">
 
-            <a href="pages/brands.html" class="header-btn header-btn-brand">
-                Brand <span>↗</span>
-            </a>
-
-            <a href="pages/creators.html" class="header-btn header-btn-creator">
-                Creator <span>↗</span>
-            </a>
+            <!-- CTA -->
+            <div class="nav-btn-div">
+                <a href="/pages/contact.html" class="nav-btn nav-btn1">
+                    Brands
+                    <span>↗</span>
+                </a>
+                <a href="/pages/contact.html" class="nav-btn nav-btn2">
+                    Creators
+                    <span>↗</span>
+                </a>
+            </div>
 
         </div>
 
     </nav>
+
 </header>
+<script>
+
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop();
+
+
+    const navLinks =
+        document.querySelectorAll(".nav-links a");
+
+
+    navLinks.forEach(function (link) {
+
+        const linkPage =
+            link.getAttribute("href")
+                .split("/")
+                .pop();
+
+
+        if (linkPage === currentPage) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+    /* =========================================
+   HEADER SCROLL HIDE / SHOW
+========================================= */
+
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", function () {
+
+        const currentScrollY = window.scrollY;
+
+        // Top of page → always show header
+        if (currentScrollY <= 20) {
+            document.querySelector(".site-header")
+                ?.classList.remove("header-hidden");
+
+            lastScrollY = currentScrollY;
+            return;
+        }
+
+        // Scrolling down → hide
+        if (currentScrollY > lastScrollY) {
+            document.querySelector(".site-header")
+                ?.classList.add("header-hidden");
+        }
+
+        // Scrolling up → show
+        else if (currentScrollY < lastScrollY) {
+            document.querySelector(".site-header")
+                ?.classList.remove("header-hidden");
+        }
+
+        lastScrollY = currentScrollY;
+    });
+
+</script>

@@ -38,6 +38,9 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+main {
+    padding-bottom: 200px;
+}
 img {
     display: block;
     max-width: 100%;
@@ -103,6 +106,7 @@ select {
 ========================================================= */
 
 .gradient-text {
+    margin: 10px 0px;
     display: inline-block;
 
     background:
@@ -207,6 +211,7 @@ select {
 ========================================================= */
 
 .hero-section {
+    padding-top: 80px;
     position: relative;
 
     min-height: 760px;
