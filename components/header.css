@@ -56,8 +56,6 @@ body {
   /* Soft premium shadow */
 
   box-sizing: border-box;
-
- 
 }
 
 /* =========================================
@@ -190,8 +188,8 @@ body {
 /* =========================================
    CTA BUTTON
 ========================================= */
-.nav-btn-div{
-    flex-direction: column;
+.nav-btn-div {
+  flex-direction: column;
 }
 .nav-btn {
   display: inline-flex;
@@ -201,7 +199,7 @@ body {
   gap: 18px;
 
   padding: 7px 15px;
-margin: 5px;
+  margin: 5px;
   color: #fff;
 
   background: #111;
@@ -242,15 +240,14 @@ margin: 5px;
   transform: translate(2px, -2px);
 }
 
-.nav-btn1{
-    background-color: white;
-    color: #111;
-    border:1px solid #111;
+.nav-btn1 {
+  background-color: white;
+  color: #111;
+  border: 1px solid #111;
 }
-.nav-btn1:hover{
-
-    border:none;
-    color: white;
+.nav-btn1:hover {
+  border: none;
+  color: white;
 }
 
 /* =========================================
@@ -389,12 +386,12 @@ margin: 5px;
 
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
+    transform: translateY(-14px) scale(0.98);
 
     transition:
-      opacity 0.25s ease,
-      transform 0.25s ease,
-      visibility 0.25s ease;
+      opacity 0.35s ease,
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0.35s ease;
   }
 
   /* Menu Links */
@@ -448,8 +445,7 @@ margin: 5px;
   .menu-toggle:checked ~ .nav-content {
     opacity: 1;
     visibility: visible;
-
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 
   /* Hamburger Animation */
@@ -548,47 +544,41 @@ margin: 5px;
    Services menu visible rahega.
 */
 
-      .services-dropdown .services-menu {
-        display: none;
-    }
+  .services-dropdown .services-menu {
+    display: none;
+  }
 
-    .services-dropdown.mobile-open .services-menu {
-        display: block;
-    }
+  .services-dropdown.mobile-open .services-menu {
+    display: block;
+  }
 
-    .services-dropdown.mobile-open .dropdown-arrow {
-        transform: rotate(180deg);
-    }
+  .services-dropdown.mobile-open .dropdown-arrow {
+    transform: rotate(180deg);
+  }
 }
 @media (max-width: 700px) {
+  /* Services dropdown closed */
+  .services-dropdown .services-menu {
+    display: none;
+  }
 
-    /* Services dropdown closed */
-    .services-dropdown .services-menu {
-        display: none;
-    }
+  /* Services dropdown opened */
+  .services-dropdown.mobile-open .services-menu {
+    display: block;
+  }
 
-
-    /* Services dropdown opened */
-    .services-dropdown.mobile-open .services-menu {
-        display: block;
-    }
-
-
-    /* Arrow */
-    .services-dropdown.mobile-open .dropdown-arrow {
-        transform: rotate(180deg);
-    }
-
+  /* Arrow */
+  .services-dropdown.mobile-open .dropdown-arrow {
+    transform: rotate(180deg);
+  }
 }
 @media (max-width: 700px) {
-
-    .services-dropdown:hover .services-menu {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        transform: none;
-    }
-
+  .services-dropdown:hover .services-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+  }
 }
 
 /* =========================================
@@ -809,7 +799,6 @@ margin: 5px;
   transform: rotate(180deg);
 }
 
-
 /* =========================================
    NAVBAR ENTRANCE
 ========================================= */
@@ -837,10 +826,10 @@ margin: 5px;
 ========================================= */
 
 .site-header {
-    transition: transform 0.45s cubic-bezier(.22, 1, .36, 1);
-    will-change: transform;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
 .site-header.header-hidden {
-    transform: translateY(calc(-100% - 25px));
+  transform: translateY(calc(-100% - 25px));
 }
