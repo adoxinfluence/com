@@ -1,21 +1,29 @@
 <header class="site-header">
-    <link rel="stylesheet" href="header.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <nav class="navbar">
 
         <!-- Logo -->
-        <a href="../index.html" class="logo">
-            <img src="assets/logo/adoxinfluence.png" alt="Digital Agency Logo">
+        <a href="../index.html" class="logo" aria-label="AdoXInfluence Home">
+            <img
+                src="../assets/logo/adoxinfluence.png"
+                alt="AdoXInfluence"
+            >
         </a>
 
 
         <!-- Mobile Menu Toggle -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+            aria-label="Toggle navigation"
+        >
 
-        <label for="menu-toggle" class="menu-icon">
+        <label
+            for="menu-toggle"
+            class="menu-icon"
+            aria-label="Open navigation menu"
+        >
             <span></span>
             <span></span>
             <span></span>
@@ -28,25 +36,31 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="/index.html" data-page="home">
+                    <a href="../index.html" data-page="home">
                         Home
                     </a>
                 </li>
 
                 <li>
-                    <a href="/pages/about.html" data-page="For Brands">
+                    <a href="../pages/brands.html" data-page="brands">
                         For Brands
                     </a>
                 </li>
 
-
                 <li>
-                    <a href="/pages/contact.html" data-page="For Creators">
+                    <a href="../pages/creators.html" data-page="creators">
                         For Creators
                     </a>
                 </li>
+
                 <li>
-                    <a href="/pages/contact.html" data-page="Contact">
+                    <a href="../pages/work.html" data-page="work">
+                        Work
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../pages/contact.html" data-page="contact">
                         Contact
                     </a>
                 </li>
@@ -56,14 +70,23 @@
 
             <!-- CTA -->
             <div class="nav-btn-div">
-                <a href="/pages/contact.html" class="nav-btn nav-btn1">
-                    Brands
-                    <span>↗</span>
+
+                <a
+                    href="../pages/brands.html"
+                    class="nav-btn nav-btn1"
+                >
+                    <span>Brands</span>
+                    <b>↗</b>
                 </a>
-                <a href="/pages/contact.html" class="nav-btn nav-btn2">
-                    Creators
-                    <span>↗</span>
+
+                <a
+                    href="../pages/creators.html"
+                    class="nav-btn nav-btn2"
+                >
+                    <span>Creators</span>
+                    <b>↗</b>
                 </a>
+
             </div>
 
         </div>
