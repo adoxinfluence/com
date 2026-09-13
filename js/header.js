@@ -3,110 +3,315 @@
    ========================================= */
 
 document.addEventListener("DOMContentLoaded", async function () {
-  const headerPlaceholder = document.getElementById("header-placeholder");
 
-  if (!headerPlaceholder) {
-    console.error("Header placeholder not found.");
-    return;
-  }
+    const headerPlaceholder =
+        document.getElementById("header-placeholder");
 
-  try {
-    /* ================================
+    if (!headerPlaceholder) {
+        console.error("Header placeholder not found.");
+        return;
+    }
+
+
+    try {
+
+        /* ================================
+           DETECT PAGE LOCATION
+        ================================= */
+
+        const isInsidePagesFolder =
+            window.location.pathname
+                .split("/")
+                .includes("pages");
+
+
+        const headerPath =
+            isInsidePagesFolder
+                ? "../components/header.html"
+                : "components/header.html";
+
+
+        /* ================================
            LOAD HEADER
         ================================= */
 
-    const response = await fetch("components/header.html");
+        const response =
+            await fetch(headerPath);
 
-    if (!response.ok) {
-      throw new Error("Header could not be loaded.");
-    }
 
-    const headerHTML = await response.text();
+        if (!response.ok) {
+            throw new Error(
+                "Header could not be loaded."
+            );
+        }
 
-    headerPlaceholder.innerHTML = headerHTML;
 
-    /* ================================
+        const headerHTML =
+            await response.text();
+
+
+        headerPlaceholder.innerHTML =
+            headerHTML;
+
+
+        /* ================================
            ACTIVE PAGE
         ================================= */
 
-    const currentPage =
-      window.location.pathname.split("/").pop() || "index.html";
+        let currentPage =
+            window.location.pathname
+                .split("/")
+                .pop();
 
-    const navLinks = document.querySelectorAll(".nav-links a");
 
-    navLinks.forEach(function (link) {
-      const linkPage = link.getAttribute("href").split("/").pop();
-
-      if (linkPage === currentPage) {
-        link.classList.add("active");
-      }
-    });
-
-    /* ================================
-   MOBILE MENU
-================================= */
-
-    const menuToggle = document.getElementById("menu-toggle");
-    const navContent = document.querySelector(".nav-content");
-
-    if (menuToggle && navContent) {
-      // Navigation link click → menu close
-      const mobileLinks = document.querySelectorAll(".nav-links a");
-
-      mobileLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-          menuToggle.checked = false;
-        });
-      });
-
-      // Header ke bahar click → menu close
-      document.addEventListener("click", function (event) {
-        const header = document.querySelector(".site-header");
-
-        if (!header) return;
-
-        // Agar click header ke andar nahi hua
-        if (!header.contains(event.target)) {
-          menuToggle.checked = false;
+        if (!currentPage) {
+            currentPage = "index.html";
         }
-      });
-    }
 
-    /* ================================
+
+        const navLinks =
+            document.querySelectorAll(
+                ".nav-links a"
+            );
+
+
+        navLinks.forEach(function (link) {
+
+            const href =
+                link.getAttribute("href");
+
+
+            if (!href) return;
+
+
+            const linkPage =
+                href
+                    .split("/")
+                    .pop();
+
+
+            if (
+                linkPage === currentPage
+            ) {
+
+                link.classList.add(
+                    "active"
+                );
+
+            }
+
+        });
+
+
+        /* ================================
+           MOBILE MENU
+        ================================= */
+
+        const menuToggle =
+            document.getElementById(
+                "menu-toggle"
+            );
+
+
+        const navContent =
+            document.querySelector(
+                ".nav-content"
+            );
+
+
+        if (
+            menuToggle &&
+            navContent
+        ) {
+
+            const mobileLinks =
+                document.querySelectorAll(
+                    ".nav-links a, .nav-btn"
+                );
+
+
+            /* Navigation click → close */
+
+            mobileLinks.forEach(
+                function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            menuToggle.checked =
+                                false;
+
+                        }
+                    );
+
+                }
+            );
+
+
+            /* Outside click → close */
+
+            document.addEventListener(
+                "click",
+                function (event) {
+
+                    const header =
+                        document.querySelector(
+                            ".site-header"
+                        );
+
+
+                    if (!header) return;
+
+
+                    if (
+                        !header.contains(
+                            event.target
+                        )
+                    ) {
+
+                        menuToggle.checked =
+                            false;
+
+                    }
+
+                }
+            );
+
+
+            /* ESC → close */
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key === "Escape"
+                    ) {
+
+                        menuToggle.checked =
+                            false;
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* ================================
            HEADER SCROLL
         ================================= */
 
-    const header = document.querySelector(".site-header");
+        const header =
+            document.querySelector(
+                ".site-header"
+            );
 
-    let lastScrollY = window.scrollY;
 
-    window.addEventListener("scroll", function () {
-      const currentScrollY = window.scrollY;
+        if (!header) return;
 
-      if (!header) return;
 
-      // Top of page → always show
-      if (currentScrollY <= 20) {
-        header.classList.remove("header-hidden");
+        let lastScrollY =
+            window.scrollY;
 
-        lastScrollY = currentScrollY;
 
-        return;
-      }
+        let ticking = false;
 
-      // Scrolling down → hide
-      if (currentScrollY > lastScrollY) {
-        header.classList.add("header-hidden");
-      }
 
-      // Scrolling up → show
-      else if (currentScrollY < lastScrollY) {
-        header.classList.remove("header-hidden");
-      }
+        function updateHeader() {
 
-      lastScrollY = currentScrollY;
-    });
-  } catch (error) {
-    console.error("Header loading error:", error);
-  }
+            const currentScrollY =
+                window.scrollY;
+
+
+            /* Top → always visible */
+
+            if (
+                currentScrollY <= 20
+            ) {
+
+                header.classList.remove(
+                    "header-hidden"
+                );
+
+
+                lastScrollY =
+                    currentScrollY;
+
+
+                ticking = false;
+
+                return;
+            }
+
+
+            /* Scroll down → hide */
+
+            if (
+                currentScrollY >
+                lastScrollY
+            ) {
+
+                header.classList.add(
+                    "header-hidden"
+                );
+
+            }
+
+
+            /* Scroll up → show */
+
+            else if (
+                currentScrollY <
+                lastScrollY
+            ) {
+
+                header.classList.remove(
+                    "header-hidden"
+                );
+
+            }
+
+
+            lastScrollY =
+                currentScrollY;
+
+
+            ticking = false;
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (!ticking) {
+
+                    window.requestAnimationFrame(
+                        updateHeader
+                    );
+
+                    ticking = true;
+
+                }
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Header loading error:",
+            error
+        );
+
+    }
+
 });
