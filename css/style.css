@@ -1762,6 +1762,1824 @@ select {
         margin-top: 34px;
     }
 }
+
+/* =========================================================
+   AdoXInfluence — HOME CONTACT
+   Premium Connect With Us Section
+   Desktop + Tablet + Mobile
+   ========================================================= */
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.home-contact {
+    position: relative;
+
+    padding: 120px 0 45px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(37, 99, 235, 0.09),
+            transparent 27%
+        ),
+        radial-gradient(
+            circle at 8% 85%,
+            rgba(99, 102, 241, 0.06),
+            transparent 25%
+        ),
+        #f8fafc;
+
+    overflow: hidden;
+}
+
+
+/* Decorative circles */
+
+.home-contact::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -300px;
+    right: -160px;
+
+    border: 1px solid rgba(37, 99, 235, 0.07);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.home-contact::after {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    bottom: -230px;
+    left: -150px;
+
+    border: 1px solid rgba(37, 99, 235, 0.05);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.home-contact-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, calc(100% - 48px));
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.home-contact-heading {
+    max-width: 760px;
+
+    margin-bottom: 55px;
+}
+
+.home-contact-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 9px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+
+    color: #2563eb;
+}
+
+.home-contact-eyebrow::before {
+    content: "";
+
+    width: 25px;
+    height: 2px;
+
+    border-radius: 20px;
+
+    background: #2563eb;
+}
+
+.home-contact-heading h2 {
+    max-width: 700px;
+
+    margin: 20px 0 17px;
+
+    font-size: clamp(42px, 5vw, 64px);
+
+    line-height: 1.02;
+
+    letter-spacing: -0.05em;
+
+    font-weight: 800;
+
+    color: #111827;
+}
+
+.home-contact-heading p {
+    max-width: 600px;
+
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   CONTACT GRID
+   ========================================================= */
+
+.home-contact-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   CONTACT CARD
+   ========================================================= */
+
+.home-contact-card {
+    position: relative;
+
+    min-height: 260px;
+
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    text-decoration: none;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* Background glow */
+
+.home-contact-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    right: -85px;
+    bottom: -95px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, 0.055);
+
+    transition:
+        transform 0.45s ease;
+}
+
+
+/* Small blue light */
+
+.home-contact-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    right: 28px;
+    bottom: 28px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    opacity: 0;
+
+    transform: scale(0.5);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.home-contact-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #cbd5e1;
+
+    box-shadow:
+        0 24px 50px rgba(15, 23, 42, 0.09);
+}
+
+
+.home-contact-card:hover::before {
+    transform: scale(1.5);
+}
+
+
+.home-contact-card:hover::after {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.home-contact-card-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.home-contact-number {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    color: #2563eb;
+}
+
+
+.home-contact-arrow {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #dbe3ec;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+
+    color: #334155;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.home-contact-card:hover .home-contact-arrow {
+    transform: translate(3px, -3px);
+
+    color: #ffffff;
+
+    background: #111827;
+
+    border-color: #111827;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.home-contact-card-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.home-contact-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    color: #2563eb;
+}
+
+
+.home-contact-card h3 {
+    margin: 0 0 10px;
+
+    font-size: 28px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.035em;
+
+    font-weight: 800;
+
+    color: #111827;
+}
+
+
+.home-contact-card p {
+    max-width: 420px;
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   DISABLED WHATSAPP GROUP
+   ========================================================= */
+
+.home-contact-card-disabled {
+    cursor: default;
+
+    background: #f1f5f9;
+
+    border-color: #e5e7eb;
+
+    box-shadow: none;
+
+    opacity: 0.78;
+}
+
+
+.home-contact-card-disabled::before,
+.home-contact-card-disabled::after {
+    display: none;
+}
+
+
+.home-contact-card-disabled:hover {
+    transform: none;
+
+    border-color: #e2e8f0;
+
+    box-shadow: none;
+
+    background: #f1f5f9;
+}
+
+
+.home-contact-card-disabled
+.home-contact-arrow {
+    color: #94a3b8;
+
+    background: #e8edf3;
+
+    border-color: #e2e8f0;
+}
+
+
+/* =========================================================
+   BOTTOM DIRECT CONTACT
+   ========================================================= */
+
+.home-contact-bottom {
+    min-height: 72px;
+
+    margin-top: 14px;
+
+    padding: 0 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+}
+
+
+.home-contact-bottom > span {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #64748b;
+}
+
+
+.home-contact-bottom > a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #111827;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 750;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.home-contact-bottom > a:hover {
+    color: #2563eb;
+}
+
+
+.home-contact-bottom > a span {
+    font-size: 17px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.home-contact-bottom > a:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .home-contact {
+        padding: 100px 0 40px;
+    }
+
+    .home-contact-container {
+        width: min(100% - 40px, 720px);
+    }
+
+    .home-contact-heading {
+        margin-bottom: 45px;
+    }
+
+    .home-contact-heading h2 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .home-contact {
+        padding: 80px 0 32px;
+    }
+
+    .home-contact-container {
+        width: calc(100% - 32px);
+    }
+
+    .home-contact-heading {
+        margin-bottom: 35px;
+    }
+
+    .home-contact-heading h2 {
+        margin-top: 17px;
+
+        font-size: 39px;
+
+        line-height: 1.03;
+    }
+
+    .home-contact-heading p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* Cards */
+
+    .home-contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .home-contact-card {
+        min-height: 225px;
+
+        padding: 24px;
+    }
+
+    .home-contact-card h3 {
+        font-size: 25px;
+    }
+
+
+    /* Bottom */
+
+    .home-contact-bottom {
+        min-height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .home-contact-container {
+        width: calc(100% - 28px);
+    }
+
+    .home-contact-heading h2 {
+        font-size: 35px;
+    }
+
+    .home-contact-eyebrow {
+        font-size: 9px;
+    }
+
+    .home-contact-card {
+        min-height: 210px;
+
+        padding: 21px;
+
+        border-radius: 17px;
+    }
+
+    .home-contact-arrow {
+        width: 38px;
+        height: 38px;
+
+        font-size: 16px;
+    }
+
+    .home-contact-card h3 {
+        font-size: 23px;
+    }
+
+    .home-contact-card p {
+        font-size: 13px;
+    }
+
+    .home-contact-bottom {
+        border-radius: 13px;
+    }
+
+    .home-contact-bottom > a {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .home-contact-heading h2 {
+        font-size: 32px;
+    }
+
+    .home-contact-card {
+        min-height: 195px;
+
+        padding: 18px;
+    }
+
+    .home-contact-card h3 {
+        font-size: 21px;
+    }
+
+    .home-contact-bottom > a {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.home-contact-card:focus-visible,
+.home-contact-bottom a:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .home-contact-card,
+    .home-contact-card::before,
+    .home-contact-card::after,
+    .home-contact-arrow,
+    .home-contact-bottom > a,
+    .home-contact-bottom > a span {
+        transition: none;
+    }
+
+}
+
+
+
+/* =========================================================
+   AdoXInfluence — CONNECT SECTION
+   Brand + Creator Dual Form
+   Desktop / Tablet / Mobile
+   ========================================================= */
+
+
+/* =========================================================
+   SECTION BASE
+   ========================================================= */
+
+.connect-section {
+    position: relative;
+
+    padding: 125px 0 70px;
+
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(37, 99, 235, 0.09),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 8% 85%,
+            rgba(79, 70, 229, 0.055),
+            transparent 25%
+        ),
+        #f8fafc;
+
+    overflow: hidden;
+}
+
+.connect-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 560px;
+    height: 560px;
+
+    top: -360px;
+    right: -180px;
+
+    border: 1px solid rgba(37, 99, 235, 0.07);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.connect-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    bottom: -270px;
+    left: -180px;
+
+    border: 1px solid rgba(37, 99, 235, 0.05);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.connect-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, calc(100% - 48px));
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.connect-header {
+    max-width: 780px;
+
+    margin: 0 auto 58px;
+
+    text-align: center;
+}
+
+.connect-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.17em;
+
+    color: #2563eb;
+}
+
+.connect-eyebrow::before,
+.connect-eyebrow::after {
+    content: "";
+
+    width: 22px;
+    height: 2px;
+
+    border-radius: 20px;
+
+    background: #2563eb;
+}
+
+.connect-header h2 {
+    margin: 21px 0 18px;
+
+    font-size: clamp(42px, 5vw, 64px);
+
+    line-height: 1.02;
+
+    letter-spacing: -0.052em;
+
+    font-weight: 800;
+
+    color: #111827;
+}
+
+.connect-header h2 span {
+    display: block;
+
+    color: #64748b;
+}
+
+.connect-header p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   MOBILE SWITCHER
+   Hidden on desktop
+   ========================================================= */
+
+.connect-switcher {
+    display: none;
+}
+
+
+/* =========================================================
+   FORMS WRAPPER
+   ========================================================= */
+
+.connect-forms {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   FORM PANEL
+   ========================================================= */
+
+.connect-form-panel {
+    min-width: 0;
+}
+
+.connect-form-panel[hidden] {
+    display: block;
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.connect-form-card {
+    position: relative;
+
+    padding: 36px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 50px rgba(15, 23, 42, 0.055);
+
+    transition:
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.connect-form-card:hover {
+    border-color: #d5dee9;
+
+    box-shadow:
+        0 25px 60px rgba(15, 23, 42, 0.075);
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.connect-form-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding-bottom: 28px;
+
+    margin-bottom: 28px;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+.connect-form-heading {
+    min-width: 0;
+}
+
+.connect-form-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    color: #2563eb;
+}
+
+.connect-form-label::before {
+    content: "";
+
+    width: 17px;
+    height: 2px;
+
+    border-radius: 20px;
+
+    background: #2563eb;
+}
+
+.connect-form-heading h3 {
+    margin: 12px 0 9px;
+
+    font-size: 29px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.035em;
+
+    font-weight: 800;
+
+    color: #111827;
+}
+
+.connect-form-heading p {
+    max-width: 440px;
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    color: #64748b;
+}
+
+.connect-form-number {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #2563eb;
+
+    background: #f8fafc;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.professional-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.form-field {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #334155;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dbe3ec;
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #f8fafc;
+
+    color: #111827;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.22s ease,
+        background 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.form-field input,
+.form-field select {
+    height: 49px;
+
+    padding: 0 14px;
+}
+
+.form-field textarea {
+    min-height: 126px;
+
+    padding: 14px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #9aa8b8;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.form-field select {
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+   ========================================================= */
+
+.form-field input:hover,
+.form-field select:hover,
+.form-field textarea:hover {
+    border-color: #cbd5e1;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    background: #ffffff;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.connect-submit-btn {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 53px;
+
+    margin-top: 2px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 9px 22px rgba(15, 23, 42, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.connect-submit-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 75%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.17),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition:
+        left 0.65s ease;
+}
+
+.connect-submit-btn:hover::before {
+    left: 140%;
+}
+
+.connect-submit-btn:hover {
+    transform: translateY(-2px);
+
+    background: #0b1220;
+
+    box-shadow:
+        0 14px 30px rgba(15, 23, 42, 0.17);
+}
+
+.connect-submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-arrow {
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   FORM STATUS
+   ========================================================= */
+
+.form-status {
+    min-height: 17px;
+
+    margin: -5px 0 0;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   BOTTOM NOTE
+   ========================================================= */
+
+.connect-footer-note {
+    margin-top: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.connect-footer-line {
+    width: 90px;
+
+    height: 1px;
+
+    background: #dbe3ec;
+}
+
+.connect-footer-note p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #64748b;
+}
+
+.connect-footer-note a {
+    color: #334155;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease;
+}
+
+.connect-footer-note a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.connect-switch-btn:focus-visible,
+.connect-submit-btn:focus-visible,
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible,
+.connect-footer-note a:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.22);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .connect-container {
+        width: min(100% - 40px, 900px);
+    }
+
+    .connect-forms {
+        gap: 14px;
+    }
+
+    .connect-form-card {
+        padding: 28px;
+    }
+
+    .connect-form-heading h3 {
+        font-size: 26px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .connect-section {
+        padding: 90px 0 55px;
+    }
+
+    .connect-container {
+        width: calc(100% - 32px);
+    }
+
+
+    /* Header */
+
+    .connect-header {
+        margin-bottom: 35px;
+    }
+
+    .connect-header h2 {
+        margin-top: 18px;
+
+        font-size: 39px;
+
+        line-height: 1.04;
+    }
+
+    .connect-header h2 span {
+        margin-top: 4px;
+    }
+
+    .connect-header p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* ==============================================
+       MOBILE SWITCHER
+    =============================================== */
+
+    .connect-switcher {
+        position: relative;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 4px;
+
+        padding: 4px;
+
+        margin-bottom: 15px;
+
+        background: #e9eef5;
+
+        border: 1px solid #dde5ee;
+
+        border-radius: 14px;
+    }
+
+    .connect-switch-btn {
+        position: relative;
+
+        min-height: 63px;
+
+        padding: 8px 10px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 9px;
+
+        border: 0;
+
+        border-radius: 10px;
+
+        background: transparent;
+
+        color: #64748b;
+
+        font-family: inherit;
+
+        cursor: pointer;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .connect-switch-btn.active {
+        color: #111827;
+
+        background: #ffffff;
+
+        box-shadow:
+            0 4px 12px rgba(15, 23, 42, 0.08);
+    }
+
+    .connect-switch-icon {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 31px;
+        height: 31px;
+
+        flex-shrink: 0;
+
+        border-radius: 9px;
+
+        background: #f1f5f9;
+
+        font-size: 14px;
+    }
+
+    .connect-switch-btn.active
+    .connect-switch-icon {
+        background: #eff6ff;
+    }
+
+    .connect-switch-text {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 2px;
+    }
+
+    .connect-switch-text strong {
+        font-size: 12px;
+
+        line-height: 1.2;
+    }
+
+    .connect-switch-text small {
+        font-size: 9px;
+
+        line-height: 1.2;
+
+        color: #94a3b8;
+    }
+
+    .connect-switch-btn.active
+    .connect-switch-text small {
+        color: #64748b;
+    }
+
+
+    /* ==============================================
+       MOBILE FORM BEHAVIOUR
+    =============================================== */
+
+    .connect-forms {
+        display: block;
+    }
+
+    .connect-form-panel {
+        display: none;
+    }
+
+    .connect-form-panel.active {
+        display: block;
+
+        animation:
+            connectFormIn 0.28s ease both;
+    }
+
+    .connect-form-panel[hidden] {
+        display: none;
+    }
+
+    @keyframes connectFormIn {
+
+        from {
+            opacity: 0;
+            transform: translateY(7px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+
+    /* ==============================================
+       FORM CARD
+    =============================================== */
+
+    .connect-form-card {
+        padding: 25px;
+
+        border-radius: 20px;
+
+        box-shadow:
+            0 15px 40px rgba(15, 23, 42, 0.06);
+    }
+
+    .connect-form-header {
+        padding-bottom: 23px;
+
+        margin-bottom: 23px;
+    }
+
+    .connect-form-heading h3 {
+        font-size: 25px;
+    }
+
+    .connect-form-heading p {
+        font-size: 12px;
+    }
+
+    .connect-form-number {
+        width: 38px;
+        height: 38px;
+
+        font-size: 10px;
+    }
+
+    .professional-form {
+        gap: 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .form-field input,
+    .form-field select {
+        height: 50px;
+    }
+
+    .form-field textarea {
+        min-height: 135px;
+    }
+
+
+    /* Bottom note */
+
+    .connect-footer-note {
+        margin-top: 28px;
+
+        gap: 10px;
+    }
+
+    .connect-footer-line {
+        display: none;
+    }
+
+    .connect-footer-note p {
+        text-align: center;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .connect-section {
+        padding: 78px 0 45px;
+    }
+
+    .connect-container {
+        width: calc(100% - 28px);
+    }
+
+    .connect-eyebrow {
+        font-size: 9px;
+    }
+
+    .connect-eyebrow::before,
+    .connect-eyebrow::after {
+        width: 16px;
+    }
+
+    .connect-header h2 {
+        font-size: 34px;
+    }
+
+    .connect-header p {
+        font-size: 13px;
+    }
+
+
+    /* Switcher */
+
+    .connect-switch-btn {
+        min-height: 59px;
+
+        gap: 7px;
+
+        padding: 7px 6px;
+    }
+
+    .connect-switch-icon {
+        width: 28px;
+        height: 28px;
+
+        font-size: 13px;
+    }
+
+    .connect-switch-text strong {
+        font-size: 11px;
+    }
+
+    .connect-switch-text small {
+        display: none;
+    }
+
+
+    /* Form */
+
+    .connect-form-card {
+        padding: 20px;
+
+        border-radius: 18px;
+    }
+
+    .connect-form-header {
+        gap: 12px;
+
+        padding-bottom: 20px;
+
+        margin-bottom: 20px;
+    }
+
+    .connect-form-heading h3 {
+        font-size: 23px;
+    }
+
+    .connect-form-heading p {
+        font-size: 11px;
+    }
+
+    .connect-form-number {
+        width: 34px;
+        height: 34px;
+
+        font-size: 9px;
+    }
+
+    .form-field label {
+        font-size: 10px;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+        font-size: 13px;
+    }
+
+    .connect-submit-btn {
+        min-height: 52px;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .connect-header h2 {
+        font-size: 31px;
+    }
+
+    .connect-switch-btn {
+        gap: 5px;
+
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .connect-switch-icon {
+        width: 25px;
+        height: 25px;
+
+        font-size: 11px;
+    }
+
+    .connect-switch-text strong {
+        font-size: 10px;
+    }
+
+    .connect-form-card {
+        padding: 17px;
+    }
+
+    .connect-form-heading h3 {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .connect-form-card,
+    .connect-submit-btn,
+    .connect-submit-btn::before,
+    .connect-switch-btn,
+    .form-field input,
+    .form-field select,
+    .form-field textarea,
+    .connect-footer-note a {
+        transition: none;
+    }
+
+    .connect-submit-btn::before {
+        display: none;
+    }
+
+    .connect-form-panel.active {
+        animation: none;
+    }
+
+}
+
+
+
 /* =========================================================
    17. WHAT WE DO — INTRO
 ========================================================= */
